@@ -3,6 +3,7 @@ package basic_queue;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.io.Serializable;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
@@ -18,6 +19,8 @@ public class BasicQueue {
 
     private MappedByteBuffer dataBuf;
     private MappedByteBuffer metaBuf;
+
+
 
     public BasicQueue(String path,String queueName) throws IOException {
         if(!path.endsWith(File.separator)){
